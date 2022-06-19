@@ -55,7 +55,7 @@ class NeighbourHood(models.Model):
     def __str__(self):
         return self.name
 
-# class Profile(models.Model):
+class Profile(models.Model):
     class Meta:
         db_table = 'profile'
 
@@ -95,7 +95,7 @@ class NeighbourHood(models.Model):
     def __str__(self):
         return self.user.username
 
-class Business(models.Model):
+# class Business(models.Model):
     class Meta:
         db_table = 'business'
     name= models.CharField(max_length=70)
