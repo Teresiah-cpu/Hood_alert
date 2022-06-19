@@ -118,16 +118,14 @@ class PostTest(TestCase):
     def setUp(self):
         self.robert= User.objects.create(username="Robert")
         self.test_profile= Post.objects.create(user=self.robert,
-                                                email='rober@gmail.com',
-                                                title='robert',
-                                                pub_date='12',                                   
-                                                description='No retreat no surrender',
-                                                post_pic ='picture.jpg',
-                                            
-                                                
-                                                contacts=12,
-                                               
-                                                )
+        email='rober@gmail.com',
+        title='robert',
+        pub_date='12',                                   
+        description='No retreat no surrender',
+        post_pic ='picture.jpg',
+        contacts=12,
+    
+        )
         self.test_profile.save()
 
     def test_instance(self):
@@ -152,16 +150,16 @@ class HealthTest(TestCase):
     def setUp(self):
         self.robert= User.objects.create(username="Robert")
         self.test_profile= Health.objects.create(user=self.robert,
-                                                email='rober@gmail.com',
-                                                name='robert',
-                                                pub_date='12',                                   
-                                                description='No retreat no surrender',
-                                                pic ='picture.jpg',
-                                            
-                                                
-                                                contacts=12,
-                                               
-                                                )
+        email='rober@gmail.com',
+        name='robert',
+        pub_date='12',                                   
+        description='No retreat no surrender',
+        pic ='picture.jpg',
+
+
+        contacts=12,
+
+)
         self.test_profile.save()
 
     def test_instance(self):
@@ -195,7 +193,7 @@ class PoliceTest(TestCase):
                                             
                                                 
                                                 contacts=12,
-                                               
+                                            
                                                 )
         self.test_police.save()
 
