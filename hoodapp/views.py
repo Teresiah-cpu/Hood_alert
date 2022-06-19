@@ -117,7 +117,7 @@ def addProfile(request):
     return render(request, 'addProfile.html', {'title':title,'form':form, 'profile': profile})
 
 @login_required(login_url='login')
-# def search_business(request,id):
+def search_business(request,id):
     title="Find"
     
     if 'business_name' in request.GET and request.GET['business_name']:
