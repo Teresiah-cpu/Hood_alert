@@ -81,7 +81,7 @@ def addHealth(request):
     return render(request, 'addHealth.html', {'title':title,'form':form})
 
 @login_required(login_url='login')
-# def addPost(request):
+def addPost(request):
     title='Post your concerns for your neigbourhood to see'
     current_user = request.user
     if request.method == 'POST':

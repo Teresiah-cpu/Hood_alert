@@ -138,7 +138,7 @@ class Business(models.Model):
         return self.name
 
 
-# class Post(models.Model):
+class Post(models.Model):
     class Meta:
         db_table = 'post'
     title= models.CharField(max_length=40)
