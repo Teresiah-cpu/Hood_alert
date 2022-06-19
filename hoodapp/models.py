@@ -95,7 +95,7 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
 
-# class Business(models.Model):
+class Business(models.Model):
     class Meta:
         db_table = 'business'
     name= models.CharField(max_length=70)
@@ -138,7 +138,7 @@ class Profile(models.Model):
         return self.name
 
 
-class Post(models.Model):
+# class Post(models.Model):
     class Meta:
         db_table = 'post'
     title= models.CharField(max_length=40)
