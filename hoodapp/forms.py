@@ -31,7 +31,7 @@ class AddProfile(forms.ModelForm):
         exclude = ['user','pub_date']
 
 # trial
-# class UserRegisterForm(UserCreationForm):
+class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
     phone_no = forms.CharField(max_length = 20)
     first_name = forms.CharField(max_length = 20)
