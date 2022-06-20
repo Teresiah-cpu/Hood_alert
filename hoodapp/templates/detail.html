@@ -6,7 +6,7 @@
 {{block.super}}
 {%for nbd in neighbourhoods%}
 <form class="navigation-search-container text-center" role="search" action="{% url 'search_business' nbd.id%}">
-    <input class="search-field" type="search" placeholder="Search e.g Lewis" name="business_name">
+    <input class="search-field" type="search" placeholder="Search" name="business_name">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"
             style="font-size: small;"></i> Find
     </button>
@@ -18,9 +18,8 @@
         </div>
     </div>
 </form>
-<p class="text-center"><span style="font-family: 'Princess Sofia', cursive; color: green;">M<span
-            style="font-family: 'Ephesis', cursive;">a </span><span
-            style="font-family:; color: brown;">Hood</span></span> applications allows users to be
+<p class="text-center"><span style="font-family: 'Princess Sofia'; color: rgb(6, 118, 122);"><span
+            style="font-family:; color: rgb(71, 75, 75);">App</span></span> applications allows users to be
     in the loop about everything happening in their neighborhood; from contact information of different handyman to
     meeting announcements or even alerts.</p>
 <div class="row">
@@ -29,9 +28,9 @@
 
         <div class="card" style="margin-left: 20px; margin-right: 20px;">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <h3 style="color:rgb(106, 4, 15); padding-top: 10px; padding-left: 10px;" class="card-title">
+                <h3 style="color: rgb(6, 118, 122); padding-top: 10px; padding-left: 10px;" class="card-title">
                     {{nbd.name}}</h3>
-                <hr style="color: brown;">
+                <hr style="color: rgb(6, 118, 122);">
                 <p style="padding-top: 5px; padding-left: 13px;"><em><strong>{{nbd.county}} </strong></em> County</p>
                 <img src="{{nbd.area_pic_one.url}}" class="img-fluid" />
                 <a href="#!">
@@ -47,20 +46,20 @@
                 <img src="{{nbd.area_pic_two.url}}" class="img-fluid" />
                 <p>{{nbd.name}} has about <em><strong>{{nbd.population}}</strong></em> persons. </p>
                 <div>
-                    <h5 style="color: brown;"><i class="fa fa-users" aria-hidden="true"></i> Occupants Count(<span
+                    <h5 style="color: rgb(6, 118, 122);"><i class="fa fa-users" aria-hidden="true"></i> Occupants Count(<span
                             style="font-weight: 100; color: grey;">Users registered at <span
-                                style="font-family: 'Princess Sofia', cursive; color: green;">M<span
+                                style="font-family: 'Princess Sofia', cursive; color: rgb(6, 118, 122);">Hood<span
                                     style="font-family: 'Ephesis', cursive;">a </span><span
-                                    style="font-family: 'Ephesis', cursive; color: brown;">Vicinia</span></span></span>
+                                    style="font-family: 'Ephesis', cursive; color: grey;">App</span></span></span>
                         site)</h5>
 
                     <p>{{profile.count}} person(s)</p>
 
                 </div>
-                <hr style="color: brown;">
+                <hr style="color: rgb(6, 118, 122);">
 
                 <div class="health" style="margin-top: 10px;">
-                    <h4 style="color: brown;"><i class="fa fa-medkit" aria-hidden="true"></i> Health Facilities</h4>
+                    <h4 style="color: rgb(6, 118, 122);"><i class="fa fa-medkit" aria-hidden="true"></i> Health Facilities</h4>
                     <div class="row">
                         {%for health in health%}
                         <div class="card col-md-4" style="font-size: 80%; margin-top: 10px;">
@@ -77,25 +76,25 @@
                                 </p>
 
                             </div>
-                            <hr style="color: brown;">
+                            <hr style="color: rgb(6, 118, 122);">
                             <div>
                                 <h4>Contacts</h4>
                                 <p>Email: {{health.email}}</p>
                                 <p>Phone number: 0{{health.contacts}}</p>
                             </div>
-                            <hr style="color: brown;">
+                            <hr style="color: rgb(6, 118, 122);">
                             <p>Added on {{health.pub_date}} by {{health.user.username}}</p>
                         </div>
                         {%endfor%}
                     </div>
                     <a href="{%url 'health'%}" class="btn btn-primary"
-                        style="background-color: brown; margin-top: 7px; color: white; border: none; border-radius: 5px;">Add
+                        style="color: rgb(6, 118, 122); margin-top: 7px; color: white; border: none; border-radius: 5px;">Add
                         a health facility in {{nbd.name}}</a>
-                    <hr style="color: brown;">
+                    <hr style="color: rgb(6, 118, 122);">
                 </div>
 
                 <div class="police" style="margin-top: 10px;">
-                    <h4 style="color: brown;"><i class="fa fa-shield" aria-hidden="true"></i> Police Post</h4>
+                    <h4 style="color: rgb(6, 118, 122);"><i class="fa fa-shield" aria-hidden="true"></i> Police Post</h4>
 
                     <div class="row">
                         {%for police in police%}
@@ -113,20 +112,20 @@
                                 </p>
 
                             </div>
-                            <hr style="color: brown;">
+                            <hr style="color: rgb(6, 118, 122);">
                             <div>
                                 <h4>Contacts</h4>
                                 <p>Email: {{police.email}}</p>
                                 <p>Phone number: 0{{police.contacts}}</p>
                             </div>
-                            <hr style="color: brown;">
+                            <hr style="color: rgb(6, 118, 122);">
                             <p>Added on {{police.pub_date}} by {{police.user.username}}</p>
                         </div>
                         {%endfor%}
                     </div>
 
                     <a href="{%url 'police'%}" class="btn btn-primary"
-                        style="background-color: brown; color: white; border: none; border-radius: 5px;">Add a police
+                        style="background-color: rgb(6, 118, 122); color: white; border: none; border-radius: 5px;">Add a police
                         post in {{nbd.name}}</a>
                 </div>
                 <hr>
@@ -138,18 +137,18 @@
     <div class="col-md-4">
         <div class="row" style="margin-top: 7px;">
             <a href="{%url 'post'%}" class="text-center col-md-6"><button
-                    style="background-color: brown; color: white; border: none; border-radius: 5px;"><i
+                    style="background-color: rgb(6, 118, 122); color: white; border: none; border-radius: 5px;"><i
                         class="fa fa-bullhorn" aria-hidden="true"></i> Post in {{nbd.name}}</button></a>
             <a href="{%url 'business'%}" class="text-center col-md-6"><button
-                    style="background-color: brown; color: white; border: none; border-radius: 5px;"><i
+                    style="background-color: rgb(6, 118, 122); color: white; border: none; border-radius: 5px;"><i
                         class="fa fa-money" aria-hidden="true"></i> Add a Business</button></a>
         </div>
-        <hr style="color: brown;">
+        <hr style="color: rgb(6, 118, 122);">
 
         <!-- post -->
 
         <div class="post">
-            <h3 style="color: brown;"><i class="fa fa-bell-o" aria-hidden="true"></i> Posts in {{nbd.name}}</h3>
+            <h3 style="color: rgb(6, 118, 122);"><i class="fa fa-bell-o" aria-hidden="true"></i> Posts in {{nbd.name}}</h3>
             {%for post in posts%}
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
@@ -175,17 +174,17 @@
                 <h5 class="text-center">There are no notifications added yet</h5>
             </div>
             {%endfor%}
-            <hr style="color: brown;">
+            <hr style="color: rgb(6, 118, 122);">
         </div>
 
         <div class="business">
-            <h3 style="color: brown;"><i class="fa fa-money" aria-hidden="true"></i> Businesses in {{nbd.name}}</h3>
+            <h3 style="color: rgb(6, 118, 122);"><i class="fa fa-money" aria-hidden="true"></i> Businesses in {{nbd.name}}</h3>
             {%for business in business%}
             <div class="card" style="font-size: 80%; margin-top: 10px;">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                     <img src="{{business.business_pic_one.url}}" class="img-fluid" />
                     <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        <div class="mask" style="background-color: rgba(5, 5, 82, 0.15);"></div>
                     </a>
                 </div>
                 <div class="card-body">
@@ -194,7 +193,7 @@
                         {{business.description}}
                     </p>
                     <a href="{%url 'business_details' business.id%}" class="btn btn-primary"
-                        style="background-color: brown; color: white; border: none; border-radius: 5px;">View more
+                        style="background-color: rgb(6, 118, 122); color: white; border: none; border-radius: 5px;">View more
                         Details</a>
                 </div>
             </div>
@@ -202,7 +201,7 @@
             <div class="row">
                 <h5 class="text-center">There are no businesses added yet</h5>
             </div>
-            <hr style="color: brown;">
+            <hr style="color: rgb(6, 118, 122);">
             {%endfor%}
         </div>
     </div>

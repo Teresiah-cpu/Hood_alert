@@ -9,7 +9,6 @@
     <div class="col-md-4 text-center">
         <form action="{%url 'post'%}" method="post" enctype="multipart/form-data">
             {%csrf_token%}
-
             {% bootstrap_form form%}
             <input type="submit" class="btn btn-outline-danger btn-sm" value="Save">
         </form>
