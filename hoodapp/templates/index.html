@@ -1,25 +1,24 @@
 {%extends 'base.html'%}
 {%load static%}
-
 {% block content %}
 {{block.super}}
 <div class="row"
-
-    style="background-image: url(https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&w=400); background-size:; background-repeat: no-repeat;">
+    style="background-image: url(https://images.pexels.com/photos/1438248/pexels-photo-1438248.jpeg?auto=compress&cs=tinysrgb&w=400); background-size:cover; background-repeat: no-repeat;">
     <div class="col-md-2"></div>
     <div class="col-md-8 text-center">
         <div style="height: 45em;">
             {%for nbd in neighbourhoods%}
-            <a class='btn' style="margin-top: 20em;" href="{%url 'details' nbd.id%}"><button
-                    style="background-color: brown; color: white; border: none; border-radius: 5px;">
+            <a class='btn' style="margin-top: 20em;" href="{% url 'details' nbd.id %}"><button
+                    style="color: rgb(6, 118, 122); color: rgb(6, 118, 122); border: none; border-radius: 5px;">
                     <h3><i class="fa fa-home" aria-hidden="true"></i>{{nbd.name}}</h3>
                 </button></a>
-            <!-- {%endfor%} -->
+            {%endfor%}
         </div>
 
     </div>
     <div class="col-md-2"></div>
 </div>
+
 
 
 
