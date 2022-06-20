@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'allauth',
     'hoodapp',
-    
+    'crispy_forms',
+    'crispy_bootstrap5',
+
 ]
 
 MIDDLEWARE = [
